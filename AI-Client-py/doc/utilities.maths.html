@@ -1,0 +1,169 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module maths</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>utilities.maths</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="../src/utilities/maths.py">..\src\utilities\maths.py</a></font></td></tr></table>
+    <p><tt>Contains&nbsp;various&nbsp;math&nbsp;helpers.&nbsp;<br>
+&nbsp;<br>
+@author:&nbsp;Mathieu&nbsp;Plourde&nbsp;-&nbsp;mat.plourde@gmail.com</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="math.html">math</a><br>
+</td><td width="25%" valign=top><a href="world.html">world</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="__builtin__.html#object">__builtin__.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="utilities.maths.html#ParametricLine">ParametricLine</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ParametricLine">class <strong>ParametricLine</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Represents&nbsp;a&nbsp;parametric&nbsp;line&nbsp;between&nbsp;two&nbsp;points.<br>
+&nbsp;<br>
+A&nbsp;parametric&nbsp;line&nbsp;is&nbsp;represented&nbsp;by&nbsp;2&nbsp;points:&nbsp;a&nbsp;source&nbsp;(x0,&nbsp;y0)&nbsp;and&nbsp;a&nbsp;destination&nbsp;(x1,&nbsp;y1).<br>
+It&nbsp;represents&nbsp;x&nbsp;and&nbsp;y&nbsp;as&nbsp;functions&nbsp;of&nbsp;t:<br>
+x(t)&nbsp;=&nbsp;(x1&nbsp;-&nbsp;x0)*t&nbsp;+&nbsp;x0<br>
+y(t)&nbsp;=&nbsp;(y1&nbsp;-&nbsp;y0)*t&nbsp;+&nbsp;y0<br>
+&nbsp;<br>
+t&nbsp;=&nbsp;0&nbsp;will&nbsp;result&nbsp;in&nbsp;(x0,&nbsp;y0),&nbsp;while&nbsp;t=1&nbsp;will&nbsp;result&nbsp;in&nbsp;(x1,&nbsp;y1).<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="ParametricLine-__init__"><strong>__init__</strong></a>(self, x0, y0, x1, y1)</dt><dd><tt>Creates&nbsp;a&nbsp;parametric&nbsp;line&nbsp;from&nbsp;p(x0,&nbsp;y0)&nbsp;to&nbsp;p(x1,&nbsp;y1).<br>
+&nbsp;<br>
+:param&nbsp;x0:&nbsp;float&nbsp;variable<br>
+:param&nbsp;y0:&nbsp;float&nbsp;variable&nbsp;<br>
+:param&nbsp;x1:&nbsp;float&nbsp;variable<br>
+:param&nbsp;y1:&nbsp;float&nbsp;variable</tt></dd></dl>
+
+<dl><dt><a name="ParametricLine-getX"><strong>getX</strong></a>(self, t)</dt><dd><tt>Returns&nbsp;X&nbsp;from&nbsp;the&nbsp;specified&nbsp;t&nbsp;value.<br>
+&nbsp;<br>
+:param&nbsp;t:&nbsp;float&nbsp;variable<br>
+:returns:&nbsp;float&nbsp;variable</tt></dd></dl>
+
+<dl><dt><a name="ParametricLine-getY"><strong>getY</strong></a>(self, t)</dt><dd><tt>Returns&nbsp;Y&nbsp;from&nbsp;the&nbsp;specified&nbsp;t&nbsp;value.<br>
+&nbsp;<br>
+:param&nbsp;t:&nbsp;float&nbsp;variable<br>
+:returns:&nbsp;float&nbsp;variable</tt></dd></dl>
+
+<dl><dt><a name="ParametricLine-intersect"><strong>intersect</strong></a>(self, line)</dt><dd><tt>Returns&nbsp;the&nbsp;intersection&nbsp;point&nbsp;of&nbsp;the&nbsp;current&nbsp;line&nbsp;and&nbsp;the&nbsp;specified&nbsp;line.&nbsp;Returns&nbsp;None&nbsp;if&nbsp;they&nbsp;don't&nbsp;intersect.<br>
+&nbsp;<br>
+:param&nbsp;line:&nbsp;<a href="#ParametricLine">ParametricLine</a>&nbsp;<a href="__builtin__.html#object">object</a><br>
+:returns:&nbsp;Point&nbsp;<a href="__builtin__.html#object">object</a></tt></dd></dl>
+
+<dl><dt><a name="ParametricLine-isXInBounds"><strong>isXInBounds</strong></a>(self, x)</dt><dd><tt>Returns&nbsp;whether&nbsp;the&nbsp;specified&nbsp;x&nbsp;is&nbsp;within&nbsp;the&nbsp;bounds&nbsp;of&nbsp;the&nbsp;parametric&nbsp;line&nbsp;(t&nbsp;&gt;=&nbsp;0&nbsp;and&nbsp;t&nbsp;&lt;=&nbsp;1).<br>
+&nbsp;<br>
+:param&nbsp;x:&nbsp;float&nbsp;variable<br>
+:returns:&nbsp;bool&nbsp;variable</tt></dd></dl>
+
+<dl><dt><a name="ParametricLine-isYInBounds"><strong>isYInBounds</strong></a>(self, y)</dt><dd><tt>Returns&nbsp;whether&nbsp;the&nbsp;specified&nbsp;y&nbsp;is&nbsp;within&nbsp;the&nbsp;bounds&nbsp;of&nbsp;the&nbsp;parametric&nbsp;line&nbsp;(t&nbsp;&gt;=&nbsp;0&nbsp;and&nbsp;t&nbsp;&lt;=&nbsp;1).<br>
+&nbsp;<br>
+:param&nbsp;y:&nbsp;float&nbsp;variable<br>
+:returns:&nbsp;bool&nbsp;variable</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>bx</strong></dt>
+<dd><tt>Returns&nbsp;the&nbsp;bx&nbsp;factor&nbsp;(x0)<br>
+&nbsp;<br>
+:returns:&nbsp;float&nbsp;variable</tt></dd>
+</dl>
+<dl><dt><strong>by</strong></dt>
+<dd><tt>Returns&nbsp;the&nbsp;by&nbsp;factor&nbsp;(y0)<br>
+&nbsp;<br>
+:returns:&nbsp;float&nbsp;variable</tt></dd>
+</dl>
+<dl><dt><strong>mx</strong></dt>
+<dd><tt>Returns&nbsp;the&nbsp;mx&nbsp;factor&nbsp;(x1&nbsp;-&nbsp;x0).<br>
+&nbsp;<br>
+:returns:&nbsp;float&nbsp;variable</tt></dd>
+</dl>
+<dl><dt><strong>my</strong></dt>
+<dd><tt>Returns&nbsp;the&nbsp;my&nbsp;factor&nbsp;(y1&nbsp;-&nbsp;y0)<br>
+&nbsp;<br>
+:returns:&nbsp;float&nbsp;variable</tt></dd>
+</dl>
+<dl><dt><strong>p0</strong></dt>
+<dd><tt>Returns&nbsp;the&nbsp;source&nbsp;point&nbsp;(x0,&nbsp;y0).<br>
+&nbsp;<br>
+:returns:&nbsp;Point&nbsp;object</tt></dd>
+</dl>
+<dl><dt><strong>p1</strong></dt>
+<dd><tt>Returns&nbsp;the&nbsp;destination&nbsp;point&nbsp;(x1,&nbsp;y1).<br>
+&nbsp;<br>
+:returns:&nbsp;Point&nbsp;object</tt></dd>
+</dl>
+<dl><dt><strong>x0</strong></dt>
+<dd><tt>Returns&nbsp;x0.<br>
+&nbsp;<br>
+:returns:&nbsp;float&nbsp;variable</tt></dd>
+</dl>
+<dl><dt><strong>x1</strong></dt>
+<dd><tt>Returns&nbsp;x1.<br>
+&nbsp;<br>
+:returns:&nbsp;float&nbsp;variable</tt></dd>
+</dl>
+<dl><dt><strong>y0</strong></dt>
+<dd><tt>Returns&nbsp;y0.<br>
+&nbsp;<br>
+:returns:&nbsp;float&nbsp;variable</tt></dd>
+</dl>
+<dl><dt><strong>y1</strong></dt>
+<dd><tt>Returns&nbsp;y1.<br>
+&nbsp;<br>
+:returns:&nbsp;float&nbsp;variable</tt></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-getDotProduct"><strong>getDotProduct</strong></a>(ux, uy, vx, vy)</dt><dd><tt>Returns&nbsp;the&nbsp;dot&nbsp;product&nbsp;of&nbsp;vectors&nbsp;u(x,y)&nbsp;and&nbsp;v(x,y).<br>
+&nbsp;<br>
+:param&nbsp;ux:&nbsp;float&nbsp;variable<br>
+:param&nbsp;uy:&nbsp;float&nbsp;variable<br>
+:param&nbsp;vx:&nbsp;float&nbsp;variable<br>
+:param&nbsp;vy:&nbsp;float&nbsp;variable<br>
+:returns:&nbsp;float&nbsp;variable</tt></dd></dl>
+ <dl><dt><a name="-getEuclidianDistance"><strong>getEuclidianDistance</strong></a>(*args)</dt><dd><tt>2&nbsp;args&nbsp;(p0&nbsp;[Point],&nbsp;p1&nbsp;[Point]):&nbsp;Returns&nbsp;the&nbsp;Euclidian&nbsp;distance&nbsp;between&nbsp;the&nbsp;2&nbsp;Point&nbsp;objects&nbsp;p0&nbsp;and&nbsp;p1.<br>
+4&nbsp;args&nbsp;(x0&nbsp;[float],&nbsp;y0&nbsp;[float],&nbsp;x1&nbsp;[float],&nbsp;y1&nbsp;[float]):&nbsp;Returns&nbsp;the&nbsp;Euclidian&nbsp;distance&nbsp;between&nbsp;the&nbsp;2&nbsp;points&nbsp;(x0,&nbsp;y0)&nbsp;and&nbsp;(x1,&nbsp;y1).<br>
+&nbsp;<br>
+:returns:&nbsp;float&nbsp;variable</tt></dd></dl>
+ <dl><dt><a name="-getLine"><strong>getLine</strong></a>(*args)</dt><dd><tt>2&nbsp;args&nbsp;(p0&nbsp;[Point],&nbsp;p1&nbsp;[Point]):&nbsp;Returns&nbsp;the&nbsp;Parametric&nbsp;line&nbsp;from&nbsp;Point&nbsp;objects&nbsp;p0&nbsp;to&nbsp;p1.<br>
+4&nbsp;args&nbsp;(x0&nbsp;[float],&nbsp;y0&nbsp;[float],&nbsp;x1&nbsp;[float],&nbsp;y1&nbsp;[float]):&nbsp;Returns&nbsp;the&nbsp;Parametric&nbsp;line&nbsp;from&nbsp;point&nbsp;p(x0,&nbsp;y0)&nbsp;to&nbsp;p(x1,&nbsp;y1).<br>
+&nbsp;<br>
+:returns:&nbsp;<a href="#ParametricLine">ParametricLine</a>&nbsp;<a href="__builtin__.html#object">object</a></tt></dd></dl>
+</td></tr></table>
+</body></html>

@@ -1,0 +1,290 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module actions</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>actions</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="../src/actions.py">..\src\actions.py</a></font></td></tr></table>
+    <p><tt>@author:&nbsp;Mathieu&nbsp;Plourde&nbsp;-&nbsp;mat.plourde@gmail.com</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="__builtin__.html#object">__builtin__.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="actions.html#Action">Action</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="actions.html#DropFlagAction">DropFlagAction</a>
+</font></dt><dt><font face="helvetica, arial"><a href="actions.html#IdleAction">IdleAction</a>
+</font></dt><dt><font face="helvetica, arial"><a href="actions.html#MoveAction">MoveAction</a>
+</font></dt><dt><font face="helvetica, arial"><a href="actions.html#PickFlagAction">PickFlagAction</a>
+</font></dt><dt><font face="helvetica, arial"><a href="actions.html#ThrowAction">ThrowAction</a>
+</font></dt></dl>
+</dd>
+</dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Action">class <strong>Action</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Abstract&nbsp;class&nbsp;that&nbsp;represents&nbsp;an&nbsp;action&nbsp;that&nbsp;can&nbsp;be&nbsp;executed&nbsp;by&nbsp;a&nbsp;player.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Action-__init__"><strong>__init__</strong></a>(self, player)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>player</strong></dt>
+<dd><tt>Returns&nbsp;the&nbsp;player&nbsp;that&nbsp;executes&nbsp;this&nbsp;action.<br>
+&nbsp;<br>
+:returns:&nbsp;Player&nbsp;object</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="DropFlagAction">class <strong>DropFlagAction</strong></a>(<a href="actions.html#Action">Action</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Action">Action</a>&nbsp;that&nbsp;makes&nbsp;the&nbsp;player&nbsp;drop&nbsp;the&nbsp;flag&nbsp;at&nbsp;its&nbsp;current&nbsp;position.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="actions.html#DropFlagAction">DropFlagAction</a></dd>
+<dd><a href="actions.html#Action">Action</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="DropFlagAction-__init__"><strong>__init__</strong></a>(self, player)</dt><dd><tt><a href="#Action">Action</a>&nbsp;to&nbsp;drop&nbsp;the&nbsp;flag&nbsp;at&nbsp;the&nbsp;current&nbsp;player&nbsp;position<br>
+&nbsp;<br>
+:param&nbsp;player:&nbsp;Player&nbsp;<a href="__builtin__.html#object">object</a></tt></dd></dl>
+
+<dl><dt><a name="DropFlagAction-toString"><strong>toString</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="actions.html#Action">Action</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>player</strong></dt>
+<dd><tt>Returns&nbsp;the&nbsp;player&nbsp;that&nbsp;executes&nbsp;this&nbsp;action.<br>
+&nbsp;<br>
+:returns:&nbsp;Player&nbsp;object</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="IdleAction">class <strong>IdleAction</strong></a>(<a href="actions.html#Action">Action</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Action">Action</a>&nbsp;that&nbsp;cancels&nbsp;the&nbsp;player's&nbsp;current&nbsp;action.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="actions.html#IdleAction">IdleAction</a></dd>
+<dd><a href="actions.html#Action">Action</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="IdleAction-__init__"><strong>__init__</strong></a>(self, player)</dt><dd><tt><a href="#Action">Action</a>&nbsp;to&nbsp;stop&nbsp;anything&nbsp;the&nbsp;player&nbsp;was&nbsp;doing&nbsp;(besides&nbsp;being&nbsp;dead)<br>
+&nbsp;<br>
+:param&nbsp;player:&nbsp;Player&nbsp;<a href="__builtin__.html#object">object</a></tt></dd></dl>
+
+<dl><dt><a name="IdleAction-toString"><strong>toString</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="actions.html#Action">Action</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>player</strong></dt>
+<dd><tt>Returns&nbsp;the&nbsp;player&nbsp;that&nbsp;executes&nbsp;this&nbsp;action.<br>
+&nbsp;<br>
+:returns:&nbsp;Player&nbsp;object</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="MoveAction">class <strong>MoveAction</strong></a>(<a href="actions.html#Action">Action</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Action">Action</a>&nbsp;that&nbsp;moves&nbsp;the&nbsp;player&nbsp;to&nbsp;the&nbsp;desired&nbsp;destination.&nbsp;If&nbsp;the&nbsp;player&nbsp;can't&nbsp;reach&nbsp;the&nbsp;destination&nbsp;in&nbsp;a&nbsp;straight&nbsp;line,&nbsp;the&nbsp;shortest&nbsp;path&nbsp;will&nbsp;be&nbsp;used&nbsp;by&nbsp;the&nbsp;server.&nbsp;If&nbsp;the&nbsp;destination&nbsp;is&nbsp;in&nbsp;a&nbsp;wall,&nbsp;the&nbsp;action&nbsp;won't&nbsp;be&nbsp;executed.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="actions.html#MoveAction">MoveAction</a></dd>
+<dd><a href="actions.html#Action">Action</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="MoveAction-__init__"><strong>__init__</strong></a>(self, player, destination)</dt><dd><tt><a href="#Action">Action</a>&nbsp;that&nbsp;moves&nbsp;the&nbsp;player&nbsp;to&nbsp;the&nbsp;desired&nbsp;destination.&nbsp;If&nbsp;the&nbsp;player&nbsp;can't&nbsp;reach&nbsp;the&nbsp;destination&nbsp;in&nbsp;a&nbsp;straight&nbsp;line,&nbsp;the&nbsp;shortest&nbsp;path&nbsp;will&nbsp;be&nbsp;used&nbsp;by&nbsp;the&nbsp;server.&nbsp;If&nbsp;the&nbsp;destination&nbsp;is&nbsp;in&nbsp;a&nbsp;wall,&nbsp;the&nbsp;action&nbsp;won't&nbsp;be&nbsp;executed.<br>
+&nbsp;<br>
+:param&nbsp;destination:&nbsp;Point&nbsp;<a href="__builtin__.html#object">object</a></tt></dd></dl>
+
+<dl><dt><a name="MoveAction-toString"><strong>toString</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>destination</strong></dt>
+<dd><tt>Returns&nbsp;the&nbsp;expected&nbsp;destination&nbsp;of&nbsp;the&nbsp;player.<br>
+&nbsp;<br>
+:returns:&nbsp;Point&nbsp;object</tt></dd>
+</dl>
+<hr>
+Data descriptors inherited from <a href="actions.html#Action">Action</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>player</strong></dt>
+<dd><tt>Returns&nbsp;the&nbsp;player&nbsp;that&nbsp;executes&nbsp;this&nbsp;action.<br>
+&nbsp;<br>
+:returns:&nbsp;Player&nbsp;object</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="PickFlagAction">class <strong>PickFlagAction</strong></a>(<a href="actions.html#Action">Action</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Action">Action</a>&nbsp;that&nbsp;makes&nbsp;the&nbsp;player&nbsp;pick&nbsp;the&nbsp;flag&nbsp;if&nbsp;he&nbsp;can&nbsp;do&nbsp;it.&nbsp;To&nbsp;be&nbsp;able&nbsp;to&nbsp;pick&nbsp;the&nbsp;flag,&nbsp;the&nbsp;proportion&nbsp;of&nbsp;dead&nbsp;players&nbsp;has&nbsp;to&nbsp;be&nbsp;&gt;=&nbsp;DEAD_PROPORTION_TO_PICK&nbsp;and&nbsp;the&nbsp;distance&nbsp;to&nbsp;the&nbsp;flag&nbsp;has&nbsp;to&nbsp;be&nbsp;&lt;=&nbsp;MIN_DISTANCE_TO_PICK.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="actions.html#PickFlagAction">PickFlagAction</a></dd>
+<dd><a href="actions.html#Action">Action</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="PickFlagAction-__init__"><strong>__init__</strong></a>(self, player)</dt><dd><tt><a href="#Action">Action</a>&nbsp;that&nbsp;makes&nbsp;the&nbsp;player&nbsp;pick&nbsp;the&nbsp;flag&nbsp;if&nbsp;he&nbsp;can&nbsp;do&nbsp;it.&nbsp;To&nbsp;be&nbsp;able&nbsp;to&nbsp;pick&nbsp;the&nbsp;flag,&nbsp;the&nbsp;proportion&nbsp;of&nbsp;dead&nbsp;players&nbsp;has&nbsp;to&nbsp;be&nbsp;&gt;=&nbsp;DEAD_PROPORTION_TO_PICK&nbsp;and&nbsp;the&nbsp;distance&nbsp;to&nbsp;the&nbsp;flag&nbsp;has&nbsp;to&nbsp;be&nbsp;&lt;=&nbsp;MIN_DISTANCE_TO_PICK.<br>
+&nbsp;<br>
+:param&nbsp;player:&nbsp;Player&nbsp;<a href="__builtin__.html#object">object</a></tt></dd></dl>
+
+<dl><dt><a name="PickFlagAction-toString"><strong>toString</strong></a>(self)</dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>DEAD_PROPORTION_TO_PICK</strong> = 0.2</dl>
+
+<dl><dt><strong>MIN_DISTANCE_TO_PICK</strong> = 10.0</dl>
+
+<hr>
+Data descriptors inherited from <a href="actions.html#Action">Action</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>player</strong></dt>
+<dd><tt>Returns&nbsp;the&nbsp;player&nbsp;that&nbsp;executes&nbsp;this&nbsp;action.<br>
+&nbsp;<br>
+:returns:&nbsp;Player&nbsp;object</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ThrowAction">class <strong>ThrowAction</strong></a>(<a href="actions.html#Action">Action</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Actions&nbsp;that&nbsp;makes&nbsp;the&nbsp;player&nbsp;throw&nbsp;a&nbsp;snowball&nbsp;at&nbsp;the&nbsp;desired&nbsp;destination.&nbsp;The&nbsp;player&nbsp;will&nbsp;charge&nbsp;his&nbsp;shot&nbsp;for&nbsp;a&nbsp;certain&nbsp;amount&nbsp;of&nbsp;time&nbsp;before&nbsp;throwing.&nbsp;The&nbsp;number&nbsp;of&nbsp;charging&nbsp;frames&nbsp;is&nbsp;defined&nbsp;by&nbsp;(distance&nbsp;/&nbsp;15).<br>
+&nbsp;<br>
+The&nbsp;minimum/maximum&nbsp;distances&nbsp;the&nbsp;player&nbsp;can&nbsp;throw&nbsp;are&nbsp;determined&nbsp;by&nbsp;MIN_DISTANCE&nbsp;and&nbsp;MAX_DISTANCE.&nbsp;If&nbsp;the&nbsp;destination&nbsp;is&nbsp;beyond&nbsp;one&nbsp;of&nbsp;those&nbsp;values,&nbsp;it&nbsp;will&nbsp;be&nbsp;rounded&nbsp;up/down&nbsp;to&nbsp;MIN_DISTANCE&nbsp;/&nbsp;MAX_DISTANCE.<br>
+&nbsp;<br>
+The&nbsp;speed&nbsp;of&nbsp;the&nbsp;snowball&nbsp;depends&nbsp;of&nbsp;the&nbsp;throwing&nbsp;distance.&nbsp;At&nbsp;DISTANCE_FOR_MIN_SPEED,&nbsp;the&nbsp;speed&nbsp;is&nbsp;MIN_SPEED.&nbsp;Any&nbsp;distance&nbsp;below&nbsp;that&nbsp;will&nbsp;have&nbsp;the&nbsp;same&nbsp;speed.&nbsp;At&nbsp;DISTANCE_FOR_MAX_SPEED,&nbsp;the&nbsp;speed&nbsp;is&nbsp;MAX_SPEED.&nbsp;Any&nbsp;distance&nbsp;higher&nbsp;will&nbsp;have&nbsp;the&nbsp;same&nbsp;speed.<br>
+&nbsp;<br>
+The&nbsp;damage&nbsp;of&nbsp;the&nbsp;snowball&nbsp;=&nbsp;distance&nbsp;*&nbsp;DAMAGE_PER_DISTANCE_UNIT<br>
+&nbsp;<br>
+A&nbsp;snowball&nbsp;will&nbsp;hit&nbsp;any&nbsp;player&nbsp;in&nbsp;a&nbsp;radius&nbsp;of&nbsp;MIN_HIT_DISTANCE,&nbsp;and&nbsp;it&nbsp;disappears&nbsp;on&nbsp;impact.&nbsp;If&nbsp;many&nbsp;players&nbsp;are&nbsp;within&nbsp;MIN_HIT_DISTANCE,&nbsp;they&nbsp;will&nbsp;all&nbsp;be&nbsp;damaged.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="actions.html#ThrowAction">ThrowAction</a></dd>
+<dd><a href="actions.html#Action">Action</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="ThrowAction-__init__"><strong>__init__</strong></a>(self, player, destination)</dt><dd><tt><a href="#Action">Action</a>&nbsp;for&nbsp;throwing&nbsp;a&nbsp;snowball&nbsp;at&nbsp;the&nbsp;destination&nbsp;(Refer&nbsp;to&nbsp;class&nbsp;comments&nbsp;for&nbsp;details).<br>
+&nbsp;<br>
+:param&nbsp;player:&nbsp;Player&nbsp;<a href="__builtin__.html#object">object</a><br>
+:param&nbsp;destination:&nbsp;Point&nbsp;<a href="__builtin__.html#object">object</a></tt></dd></dl>
+
+<dl><dt><a name="ThrowAction-toString"><strong>toString</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>destination</strong></dt>
+<dd><tt>Returns&nbsp;the&nbsp;expected&nbsp;snowball&nbsp;destination.<br>
+&nbsp;<br>
+:returns:&nbsp;Point&nbsp;object</tt></dd>
+</dl>
+<dl><dt><strong>remainingFrames</strong></dt>
+<dd><tt>Returns&nbsp;the&nbsp;remaining&nbsp;charging&nbsp;frames&nbsp;of&nbsp;the&nbsp;throw&nbsp;action.<br>
+&nbsp;<br>
+:returns:&nbsp;int&nbsp;variable</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>DAMAGE_PER_DISTANCE_UNIT</strong> = 0.1</dl>
+
+<dl><dt><strong>DISTANCE_FOR_MAX_SPEED</strong> = 400.0</dl>
+
+<dl><dt><strong>DISTANCE_FOR_MIN_SPEED</strong> = 100.0</dl>
+
+<dl><dt><strong>MAX_DISTANCE</strong> = 600.0</dl>
+
+<dl><dt><strong>MAX_SPEED</strong> = 20.0</dl>
+
+<dl><dt><strong>MIN_DISTANCE</strong> = 50.0</dl>
+
+<dl><dt><strong>MIN_HIT_DISTANCE</strong> = 15.0</dl>
+
+<dl><dt><strong>MIN_SPEED</strong> = 5.0</dl>
+
+<hr>
+Data descriptors inherited from <a href="actions.html#Action">Action</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>player</strong></dt>
+<dd><tt>Returns&nbsp;the&nbsp;player&nbsp;that&nbsp;executes&nbsp;this&nbsp;action.<br>
+&nbsp;<br>
+:returns:&nbsp;Player&nbsp;object</tt></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>
